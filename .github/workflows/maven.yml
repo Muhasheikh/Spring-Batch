@@ -60,7 +60,7 @@ jobs:
           DB_PORT: 3306
           DB_NAME: spring_batch
           DB_USER: root
-          DB_PASSWORD: root
+          DB_PASSWORD: password
 
       - name: Update dependency graph
         uses: advanced-security/maven-dependency-submission-action@v5

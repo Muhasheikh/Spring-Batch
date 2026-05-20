@@ -6,7 +6,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: password
-    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:spring_batch}}
+    url: jdbc:mysql://db:3306/spring_batch
   jpa:
     show-sql: true
     hibernate:

@@ -1,0 +1,28 @@
+services:
+  spring-batch:
+    build:
+      dockerfile: ../Dockerfile
+    container_name: app
+    depends_on:
+      - db
+    volumes:
+      - ./config/application.yml:/app/application.yml
+    ports:
+      - "$LOCAL_PORT:$DOCKER_PORT"
+
+
+  db:
+    image: mysql:latest
+    container_name: db
+    volumes:
+      - /Users/alephian/UOB/data/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+#    ports:
+#      - 3306:3306
+
+networks:
+  backend-network:

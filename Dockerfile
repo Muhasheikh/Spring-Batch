@@ -7,4 +7,4 @@ COPY target/batch-processing-3.4.5.jar spring-batch.jar
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "spring-batch.jar"]
+ENTRYPOINT ["jdava", "docker images-jar", "spring-batch.jar"]

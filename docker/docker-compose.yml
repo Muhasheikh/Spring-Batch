@@ -9,7 +9,13 @@ services:
       - ./config/application.yml:/app/application.yml
     ports:
       - "$LOCAL_PORT:$DOCKER_PORT"
-
+    command:
+      [
+        "java",
+        "-jar",
+        "app.jar",
+        "--spring.config.location=file:/app/application.yml"
+      ]
 
   db:
     image: mysql:latest

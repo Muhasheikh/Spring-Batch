@@ -62,8 +62,8 @@ jobs:
           DB_USER: root
           DB_PASSWORD: password
 
-      - name: Update dependency graph
-        uses: advanced-security/maven-dependency-submission-action@v5
+      # - name: Update dependency graph
+      #   uses: advanced-security/maven-dependency-submission-action@v5
 
       - name: Build & Push Docker image
         if: github.event_name == 'push'
